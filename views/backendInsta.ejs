@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/instaStyle.css">
+</head>
+<body>
+    <h1>Good morning @<%= data.name %></h1>
+    <button >follow</button>
+    <button>message</button>
+    <p>following : <%= data.following %> &nbsp;&nbsp;&nbsp; followers : <%= data.followers %></p>
+    
+    <hr>
+
+    <!-- a for of loop for the posts -->
+    <% for (const post of data.posts) { %>
+        
+        <div class="post">
+            <img src="<%= post.image %>" alt="post">
+        <p class="likes">likes = <%= post.likes %> &nbsp;&nbsp;&nbsp; comments = <%= post.comments  %> </p>
+        </div>
+        
+    <% } %>
+
+    <p>enter either dogs or cats in the username and get their data</p>
+</body>
+</html>
